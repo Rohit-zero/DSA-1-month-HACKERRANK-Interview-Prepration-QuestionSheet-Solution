@@ -1,0 +1,19 @@
+public static String timeConversion(String s) {
+    // Write your code here
+    if (s == null || s.length() == 0) {
+        return "";
+    }
+    String[] array = s.split(":");
+    if (array[2].charAt(2) == 'P') {
+        if (!array[0].equals("12")) {
+            int currentHour = Integer.parseInt(array[0]);
+            array[0] = String.valueOf(currentHour + 12);
+        }
+    }else {
+        if (array[0].equals("12")) {
+            array[0] = "00";
+        }
+    }
+    String result = array[0] + ":" + array[1] + ":" + array[2].substring(0, 2);
+    return result;
+    }
