@@ -1,0 +1,6 @@
+public static void miniMaxSum(List<Long> arr) {
+    // Write your code here
+    Collections.sort(arr);
+    System.out.print(arr.get(0)+arr.get(1)+arr.get(2)+arr.get(3)+" ");
+    System.out.print(arr.get(1)+arr.get(2)+arr.get(3)+arr.get(4));
+    }
